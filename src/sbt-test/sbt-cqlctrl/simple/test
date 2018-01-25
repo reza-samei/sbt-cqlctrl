@@ -1,0 +1,5 @@
+# just run it!
+> set Test/cqlStatements += "CREATE KEYSPACE myks WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1}"
+> set Test/cqlStatements += "CREATE TABLE myks.mytbl (name text PRIMARY KEY, value text)"
+> set Test/cqlStatements += "INSERT INTO myks.mytbl (name, value) values ('KEY', 'A VALUE')"
+> cqlRun
